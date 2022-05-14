@@ -1,1 +1,2 @@
-print("Hello World")
+def pangkat(a:int, b:int) -> int:
+  return a^b
