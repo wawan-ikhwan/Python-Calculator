@@ -1,0 +1,16 @@
+name: Deploy VPS
+on: 
+  push:
+    branches: dev-wawan
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to vps
+      uses: appleboy/ssh-action@master
+      with:
+        username: root
+        host: 27.112.79.120
+        password: github556
+        script: echo "hello world"
