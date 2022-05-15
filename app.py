@@ -9,7 +9,7 @@ def main():
   x = request.args.get("x")
   y = request.args.get("y")
   try:
-    response = "No response!"
+    response = "No responses!"
     if op == "tambah":
       reponse = str(operasi.tambahkan(int(x),int(y)))
     return response
