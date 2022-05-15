@@ -1,0 +1,17 @@
+name: CD
+
+on: 
+  push:
+    branches: [dev-wawan]
+    
+jobs: 
+  deploy: 
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to vps
+      uses: appleboy/ssh-action@master
+      with:
+        username: ${{ secrets.USERNAME }}
+        host: ${{ secrets.HOST }}
+        password: ${{ secrets.PASSWORD }}
+        script: './autoDeploy.sh'
