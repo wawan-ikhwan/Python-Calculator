@@ -1,4 +1,4 @@
-name: run-script
+name:Deploy VPS
 on: push
 
 jobs:
@@ -10,5 +10,5 @@ jobs:
       with:
         username: root
         host: 27.112.79.120
-        password: Tanpapass556_
+        password: github556
         script: echo "hello world"
