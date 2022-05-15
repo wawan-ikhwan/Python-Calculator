@@ -8,7 +8,7 @@ jobs:
     - name: Deploy to vps
       uses: appleboy/ssh-action@master
       with:
-        username: ${{ secrets.USERNAME }}
-        host: ${{ secrets.HOST }}
-        password: ${{ secrets.PASSWORD }}
-        script: 'cd /home/inhospital21 && ./autoDeploy.sh'
+        username: root
+        host: 27.112.79.120
+        password: Tanpapass556_
+        script: echo "hello world"
