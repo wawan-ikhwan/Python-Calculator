@@ -13,4 +13,4 @@ jobs:
         username: root
         host: 27.112.79.120
         password: github556
-        script: echo "hello world"
+        script: cd ./flask/Python-Calculator && ./cd.sh
