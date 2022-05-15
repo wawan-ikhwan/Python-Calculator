@@ -1,11 +1,17 @@
-jobs:
-  run_tests:
-    runs-on: ubuntu-20.04
-    steps:
-    - uses: actions/checkout@v2
-    - name: Run script file
-      run: |
-         chmod +x ./public/scripts/test.sh
-         ./public/scripts/test.sh
-      shell: bash
 
+
+    name: run-script
+    on: push
+
+    jobs:
+    run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: script
+    - run: |
+    "${GITHUB_WORKSPACE}/.github/script.sh";
+    "${{ format('{0}/.github/script.sh', github.workspace) }}";
+    shell: bash
+    with:
+    password: ${{ secrets.ACCESS_TOKEN }}
