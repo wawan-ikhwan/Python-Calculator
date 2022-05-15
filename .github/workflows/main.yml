@@ -1,7 +1,7 @@
 name: Deploy VPS
 on: 
   push:
-    branches: [ dev-wawan ]
+    branches: dev-wawan
 
 jobs:
   deploy:
